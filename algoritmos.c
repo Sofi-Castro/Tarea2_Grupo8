@@ -33,11 +33,14 @@ void insertion_sort(int *arr, int n) {
 /* ── Búsqueda ─────────────────────────────────────────── */
 
 int busqueda_lineal(int *arr, int n, int valor) {
+    
     for (int i = 0; i < n; i++) {
         if (arr[i] == valor)
             return i;
     }
+
     return -1;
+
 }
 
 int busqueda_binaria(int *arr, int n, int valor) {
@@ -66,10 +69,15 @@ int busqueda_binaria(int *arr, int n, int valor) {
 }
 
 int buscar_ocurrencias(int *arr, int n, int valor, int *posiciones) {
-    /* TODO: implementar */
-    (void)arr;
-    (void)n;
-    (void)valor;
-    (void)posiciones;
-    return 0;
+
+    int k = 0;
+    // Recorro el arreglo y guardo el indice como posicion
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == valor)
+            posiciones[k++] = i;
+
+    }
+
+    return k;
+
 }
