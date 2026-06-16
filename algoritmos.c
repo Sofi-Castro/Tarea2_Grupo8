@@ -14,7 +14,7 @@ void bubble_sort(int *arr, int n) {
     (void)arr;
     (void)n; 
 
-    for (int i=0; i > n, i)
+    
 
 }
 
@@ -42,9 +42,26 @@ int busqueda_lineal(int *arr, int n, int valor) {
 
 int busqueda_binaria(int *arr, int n, int valor) {
     /* TODO: implementar */
-    (void)arr;
-    (void)n;
-    (void)valor;
+
+    int izq = 0;
+    int der = n - 1;
+    int mid;
+
+    while(izq <= der){
+        mid = izq + (der - izq) / 2;
+
+        // encontro el valor
+        if (arr[mid] == valor)return mid;
+        
+        
+        else if(arr[mid] < valor) izq = mid + 1;
+
+        
+        else der = mid - 1;
+
+    }
+
+    // no lo encontro
     return -1;
 }
 
