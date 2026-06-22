@@ -86,7 +86,7 @@ int main(void) {
 
     /* ── Búsqueda binaria (sobre arreglo ordenado) ──────── */
     copiar(arr, datos_originales, n);
-    insertion_sort(arr, n);          /* ordenar primero */
+    bubble_sort(arr, n);          /* ordenar primero */
     imprimir("Ordenado p/binaria:", arr, n);
     int idx_binaria = busqueda_binaria(arr, n, valor_busqueda);
     printf("Busqueda binaria (valor=%d): ", valor_busqueda);
